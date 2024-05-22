@@ -3,7 +3,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 
 export const routes: Routes = [
   {
-    path: 'portfolio',
+    path: '',
     component: PortfolioComponent,
   },
 ];

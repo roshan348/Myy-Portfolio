@@ -1,16 +1,44 @@
-<header class="bg-black text-white p-4 shadow-md w-full h-20 sticky top-0">
+<header
+  class="bg-gradient-to-t from-black via-black bg-gray-950 text-white p-4 shadow-md w-full h-20 sticky top-0"
+>
   <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-xl font-bold">My Portfolio</h1>
-    <nav>
-      <a href="#about" class="mr-4 hover:text-gray-300 transition duration-300"
+    <h1 class="text-xl font-bold logo">Portfolio.</h1>
+    <nav class="navbar">
+      <a
+        href="#home"
+        style="--i: 1"
+        class="active duration-1000"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Home</a
+      >
+      <a
+        href="#about"
+        style="--i: 2"
+        class="mr-4 hover:text-gray-300 transition duration-300"
         >About</a
       >
       <a
-        href="#projects"
+        href="#services"
+        style="--i: 3"
         class="mr-4 hover:text-gray-300 transition duration-300"
-        >Projects</a
+        >Services</a
       >
-      <a href="#contact" class="hover:text-gray-300 transition duration-300"
+      <a
+        href="#skills"
+        style="--i: 4"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Skills</a
+      >
+      <a
+        href="#projects"
+        style="--i: 5"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Project</a
+      >
+      <a
+        href="#contact"
+        style="--i: 6"
+        class="hover:text-gray-300 transition duration-300"
         >Contact</a
       >
     </nav>
@@ -18,7 +46,8 @@
 </header>
 
 <section
-  class="bg-gradient-to-b from-black via-black bg-gray-800 p-12 flex flex-col md:flex-row items-center"
+  id="home"
+  class="bg-gradient-to-t from-black via-black bg-gray-800 p-12 flex flex-col md:flex-row items-center"
 >
   <div class="md:w-1/2 p-4">
     <h3 class="text-2xl font-bold text-white">Hello, It's Me</h3>
@@ -42,14 +71,19 @@
     <div class="home-icn">
       <a
         href="https://www.facebook.com/profile.php?id=100044167509299"
+        style="--i: 7"
         target="_blank"
         ><i class="bx bxl-facebook ml-1.5 mt-1.5"></i
       ></a>
-      <a href="#"><i class="bx bxl-instagram ml-1.5 mt-1.5"></i></a>
-      <a href="mailto:roshan.angrio13@gmail.com" target="_blank"
+      <a href="#" style="--i: 8"
+        ><i class="bx bxl-instagram ml-1.5 mt-1.5"></i
+      ></a>
+      <a href="mailto:roshan.angrio13@gmail.com" style="--i: 9" target="_blank"
         ><i class="bx bxl-github ml-1.5 mt-1.5"></i
       ></a>
-      <a href="#"><i class="bx bxl-linkedin ml-1.5 mt-1.5"></i></a>
+      <a href="#" style="--i: 10"
+        ><i class="bx bxl-linkedin ml-1.5 mt-1.5"></i
+      ></a>
     </div>
     <a href="../../assets/roshan-image.jpeg" target="_blank" class="btn-box"
       >Download CV</a
@@ -67,77 +101,160 @@
 
 <section
   id="about"
-  class="py-20 bg-gradient-to-t from-black via-black bg-gray-800 text-center"
+  class="py-20 bg-gradient-to-b from-black via-black bg-gray-800 text-center flex flex-col md:flex-row justify-center items-center about"
 >
-  <div class="container mx-auto">
-    <h3 class="text-3xl font-bold mb-6 text-white">About Me</h3>
-    <p class="text-lg mb-4 text-white">
+  <div class="about-img mb-8 md:mb-0 md: mr-12">
+    <img
+      src="../../assets/roshan-image.jpeg"
+      alt="Profile Photo"
+      class="rounded-full w-80 h-full"
+    />
+  </div>
+
+  <div class="about-text md:max-w-2xl text-white">
+    <h2 class="text-3xl font-bold mb-6">
+      About <span class="text-3xl font-bold mb-6 text-cyan-400">Me</span>
+    </h2>
+    <p class="text-lg mb-4">
       I am a passionate frontend developer with experience in Angular. I create
       beautiful, responsive, and functional websites.
     </p>
-    <p class="text-lg text-white">
+    <p class="text-lg">
       I love coding, and I am constantly learning new technologies to improve my
       skills and deliver the best possible solutions to my clients.
     </p>
   </div>
 </section>
 
-<!-- <section id="projects" class="py-20 text-center">
-  <div class="container mx-auto">
-    <h3 class="text-3xl font-bold mb-6">My Projects</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div
-        class="bg-white shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105"
-      >
-        <img src="/assets/project1.png" alt="Project 1" class="mb-4 rounded" />
-        <h4 class="text-xl font-bold mb-2">Project Title</h4>
-        <p class="text-gray-700">Short description of the project.</p>
-      </div>
-      <div
-        class="bg-white shadow-lg rounded-lg p-6 transform transition duration-500 hover:scale-105"
-      >
-        <img src="/assets/project2.png" alt="Project 2" class="mb-4 rounded" />
-        <h4 class="text-xl font-bold mb-2">Project Title</h4>
-        <p class="text-gray-700">Short description of the project.</p>
+<section
+  id="services"
+  class="py-20 bg-gradient-to-t from-black via-black bg-gray-800"
+>
+  <div class="services" id="services">
+    <div class="service-part text-white p-20">
+      <h1 class="sub-title text-center text-6xl pb-16">
+        My <span>Services</span>
+      </h1>
+      <div class="services-list">
+        <div
+          class="transition-transform transform hover:-translate-y-2 rounded-xl"
+        >
+          <i class="bx bx-code text-6xl mb-4 text-[#00eeff]"></i>
+          <h2 class="text-2xl font-medium mb-4">Web Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            eius optio incidunt, odit, fugiat corrupti harum neque quaerat
+            doloribus minus aliquam odio maxime fugit mollitia. Aliquam, ex.
+            Sed, maiores unde?
+          </p>
+        </div>
+
+        <div
+          class="transition-transform transform hover:-translate-y-2 rounded-xl"
+        >
+          <i class="bx bx-crop text-6xl mb-4" style="color: #00eeff"></i>
+          <h2 class="text-2xl font-medium mb-4">Angular Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            eius optio incidunt, odit, fugiat corrupti harum neque quaerat
+            doloribus minus aliquam odio maxime fugit mollitia. Aliquam, ex.
+            Sed, maiores unde?
+          </p>
+        </div>
+
+        <div
+          class="transition-transform transform hover:-translate-y-2 rounded-xl"
+        >
+          <i class="bx bxl-apple text-6xl mb-4" style="color: #00eeff"></i>
+          <h2 class="text-2xl font-medium mb-4">App Development</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            eius optio incidunt, odit, fugiat corrupti harum neque quaerat
+            doloribus minus aliquam odio maxime fugit mollitia. Aliquam, ex.
+            Sed, maiores unde?
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
-<!-- <section id="contact" class="py-20 bg-gray-100 text-center">
-  <div class="container mx-auto">
-    <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
-    <form class="max-w-lg mx-auto">
-      <div class="mb-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          class="w-full p-3 rounded border border-gray-300"
-        />
+<section
+  id="skills"
+  class="py-20 bg-gradient-to-b from-black via-black bg-gray-800"
+>
+  <h1 class="sub-title text-white text-center text-6xl mb-10">
+    My <span>Skills</span>
+  </h1>
+  <div class="container1 text-white ml-96" id="skills">
+    <!-- <h1 class="heading1">Technical Skills</h1> -->
+    <div class="Technical-bars">
+      <div class="bar text-xl">
+        <i style="color: #c95d2e" class="bx bxl-html5"></i>
+        <div class="info">
+          <span class="">HTML</span>
+        </div>
+        <div class="progress-line html">
+          <span></span>
+        </div>
       </div>
-      <div class="mb-4">
-        <input
-          type="email"
-          placeholder="Your Email"
-          class="w-full p-3 rounded border border-gray-300"
-        />
+
+      <div class="bar text-xl mt-4">
+        <i style="color: #147bbc" class="bx bxl-css3"></i>
+        <div class="info">
+          <span>CSS</span>
+        </div>
+        <div class="progress-line css">
+          <span></span>
+        </div>
       </div>
-      <div class="mb-4">
-        <textarea
-          placeholder="Your Message"
-          class="w-full p-3 rounded border border-gray-300"
-        ></textarea>
+
+      <div class="bar text-xl mt-4">
+        <i style="color: #b0bc1e" class="bx bxl-javascript"></i>
+        <div class="info">
+          <span>Javascript</span>
+        </div>
+        <div class="progress-line Javascript">
+          <span></span>
+        </div>
       </div>
-      <button
-        type="submit"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300"
-      >
-        Send Message
-      </button>
-    </form>
+
+      <div class="bar text-xl mt-4">
+        <i style="color: #ff0509" class="bx bxl-angular"></i>
+        <div class="info">
+          <span>Angular</span>
+        </div>
+        <div class="progress-line Angular">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="bar text-xl mt-4">
+        <i style="color: #69bcbc" class="bx bxl-typescript"></i>
+        <div class="info">
+          <span>Typescript</span>
+        </div>
+        <div class="progress-line Typescript">
+          <span></span>
+        </div>
+      </div>
+    </div>
   </div>
-</section> -->
+</section>
 
-<!-- <footer class="bg-gray-800 text-white py-4 text-center">
-  <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-</footer> -->
+<section
+  id="projects"
+  class="bg-gradient-to-b from-black via-black bg-gray-800"
+>
+  <div class="text-white">
+    <div class="main-text" id="project">
+      <h2>Latest <span>Project</span></h2>
+
+      <div class="project-content">
+        <div class="row m-0 p-0 w-100">
+          <img class="w-52" src="../../assets/project-image.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
