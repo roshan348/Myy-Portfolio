@@ -1,4 +1,4 @@
-<header
+<!-- <header
   class="bg-gradient-to-t from-black via-black bg-gray-950 text-white p-4 shadow-md w-full h-20 sticky top-0"
 >
   <div class="container mx-auto flex justify-between items-center">
@@ -7,7 +7,6 @@
       <a
         href="#home"
         style="--i: 1"
-        class="active duration-1000"
         class="mr-4 hover:text-gray-300 transition duration-300"
         >Home</a
       >
@@ -43,18 +42,93 @@
       >
     </nav>
   </div>
+</header> -->
+
+<header
+  class="bg-gradient-to-t from-black via-black bg-gray-950 text-white p-4 shadow-md w-full h-20 fixed top-0 z-10"
+>
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-xl font-bold logo">Portfolio.</h1>
+    <nav class="navbar">
+      <a
+        href="#home"
+        style="--i: 1"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Home</a
+      >
+      <a
+        href="#about"
+        style="--i: 2"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >About</a
+      >
+      <a
+        href="#services"
+        style="--i: 3"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Services</a
+      >
+      <a
+        href="#skills"
+        style="--i: 4"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Skills</a
+      >
+      <a
+        href="#projects"
+        style="--i: 5"
+        class="mr-4 hover:text-gray-300 transition duration-300"
+        >Projects</a
+      >
+      <a
+        href="#contact"
+        style="--i: 6"
+        class="hover:text-gray-300 transition duration-300"
+        >Contact</a
+      >
+    </nav>
+    <button (click)="toggleNav()" class="menu-button">
+      <i class="bx bx-menu text-3xl"></i>
+    </button>
+  </div>
 </header>
+
+<div [class.open]="isNavOpen" class="side-nav">
+  <nav class="navbar">
+    <a href="#home" class="nav-link" (click)="toggleNav()">Home</a>
+    <a href="#about" class="nav-link" (click)="toggleNav()">About</a>
+    <a href="#services" class="nav-link" (click)="toggleNav()">Services</a>
+    <a href="#skills" class="nav-link" (click)="toggleNav()">Skills</a>
+    <a href="#projects" class="nav-link" (click)="toggleNav()">Projects</a>
+    <a href="#contact" class="nav-link" (click)="toggleNav()">Contact</a>
+  </nav>
+</div>
+
+<div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div>
+
+<div [class.open]="isNavOpen" class="side-nav">
+  <nav class="navbar">
+    <a href="#home" class="nav-link" (click)="toggleNav()">Home</a>
+    <a href="#about" class="nav-link" (click)="toggleNav()">About</a>
+    <a href="#services" class="nav-link" (click)="toggleNav()">Services</a>
+    <a href="#skills" class="nav-link" (click)="toggleNav()">Skills</a>
+    <a href="#projects" class="nav-link" (click)="toggleNav()">Projects</a>
+    <a href="#contact" class="nav-link" (click)="toggleNav()">Contact</a>
+  </nav>
+</div>
+
+<div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div>
 
 <section
   id="home"
   class="bg-gradient-to-t from-black via-black bg-gray-800 p-12 flex flex-col md:flex-row items-center"
 >
-  <div class="md:w-1/2 p-4">
+  <div class="md:w-1/2 p-4 home-content">
     <h3 class="text-2xl font-bold text-white">Hello, It's Me</h3>
     <h1 class="text-4xl font-bold text-white">Roshan Patil</h1>
-    <h3 class="text-2xl font-bold mb-4 text-white">
+    <h2 class="text-2xl font-bold mb-4 text-white">
       And I'm a <span class="dynamic-texts-wrapper"></span>
-    </h3>
+    </h2>
     <!-- <div class="slider-text-container">
       <div class="text-2xl text-white font-bold mb-4 static-text">I'm a</div>
       <ul class="dynamic-text">
@@ -90,7 +164,7 @@
     >
   </div>
 
-  <div class="md:w-1/2 p-4 flex justify-center md:justify-end">
+  <div class="md:w-1/2 p-4 flex justify-center md:justify-end mt-10">
     <img
       src="../../assets/roshan-image.jpeg"
       alt="Profile Photo"
@@ -142,10 +216,8 @@
           <i class="bx bx-code text-6xl mb-4 text-[#00eeff]"></i>
           <h2 class="text-2xl font-medium mb-4">Web Development</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            eius optio incidunt, odit, fugiat corrupti harum neque quaerat
-            doloribus minus aliquam odio maxime fugit mollitia. Aliquam, ex.
-            Sed, maiores unde?
+            Web development is the work involved in developing a website for the
+            Internet (World Wide Web) or an intranet (a private network).
           </p>
         </div>
 
@@ -155,10 +227,8 @@
           <i class="bx bx-crop text-6xl mb-4" style="color: #00eeff"></i>
           <h2 class="text-2xl font-medium mb-4">Angular Development</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            eius optio incidunt, odit, fugiat corrupti harum neque quaerat
-            doloribus minus aliquam odio maxime fugit mollitia. Aliquam, ex.
-            Sed, maiores unde?
+            An Angular developer develops web applications using analytical
+            reasoning, originality and problem-solving abilities.
           </p>
         </div>
 
@@ -168,10 +238,10 @@
           <i class="bx bxl-apple text-6xl mb-4" style="color: #00eeff"></i>
           <h2 class="text-2xl font-medium mb-4">App Development</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            eius optio incidunt, odit, fugiat corrupti harum neque quaerat
-            doloribus minus aliquam odio maxime fugit mollitia. Aliquam, ex.
-            Sed, maiores unde?
+            Mobile application development is the process of creating software
+            applications that run on a mobile device, and a typical mobile
+            application utilizes a network connection to work with remote
+            computing resources.
           </p>
         </div>
       </div>
@@ -251,7 +321,7 @@
       <h2>Latest <span>Project</span></h2>
 
       <div class="px-5 project-content mt-10">
-        <div class="row m-0 p-0 w-100 ml-10">
+        <div class="row m-0 p-0 w-100 ml-10 project-card">
           <img
             class="w-52 h-72"
             src="../../assets/afforadable-project-jpg.jpg"
@@ -271,7 +341,7 @@
           </div>
         </div>
 
-        <div class="row m-0 p-0 w-100">
+        <div class="row m-0 p-0 w-100 project-card">
           <img
             class="w-52 h-72"
             src="../../assets/symplr-project-jpg.jpg"
@@ -289,7 +359,7 @@
           </div>
         </div>
 
-        <div class="row m-0 p-0 w-100">
+        <div class="row m-0 p-0 w-100 project-card">
           <img
             class="w-52 h-72"
             src="../../assets/shopzy-project-jpg.jpg"
@@ -302,7 +372,7 @@
               physical goods, services, and digital products over the internet
               rather than at a brick-and-mortar location.
             </p>
-            <a href="#"
+            <a href="http://localhost:50216/" target="_blank"
               ><i class="bx bx-link-external" style="color: cyan"></i
             ></a>
           </div>
@@ -320,37 +390,96 @@
     <h2>Contact <span>Me</span></h2>
     <h4>Let's Work Together</h4>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni
-      iusto corrupti. Vero voluptas id ducimus delectus eveniet dolore culpa
-      sapiente, laudantium magnam dolorum eaque et, fugiat similique pariatur
-      expedita?
+      I am passionate about creating innovative and efficient solutions through
+      web development. With a keen eye for detail and a commitment to delivering
+      high-quality work, I am eager to collaborate on exciting projects. Whether
+      you have a new project in mind or need help with an existing one, feel
+      free to reach out. Let's make something great together!
     </p>
     <div class="contact-list">
-      <li><i class="bx bxs-send"></i>contact&#64;gmail.com</li>
-      <li><i class="bx bx-phone-call"></i>0123456789</li>
+      <li>
+        <i class="bx bxs-send mr-2"></i
+        ><a href="mailto:roshan.angrio@gmail.com" target="_blank"
+          >roshan.angrio&#64;gmail.com</a
+        >
+      </li>
+      <li>
+        <i class="bx bx-phone-call mr-2"></i
+        ><a target="_blank" href="tel:7984288693">7984288693</a>
+      </li>
     </div>
     <div class="contact-icons">
-      <a href=""><i class="bx bxl-facebook-circle pl-2 pt-2"></i></a>
-      <a href=""><i class="bx bxl-instagram pl-2 pt-2"></i></a>
-      <a href=""><i class="bx bxl-github pl-2 pt-2"></i></a>
-      <a href=""><i class="bx bxl-linkedin pl-2 pt-2"></i></a>
+      <a href=""><i class="bx bxl-facebook-circle social-icon"></i></a>
+      <a href=""><i class="bx bxl-instagram social-icon"></i></a>
+      <a href=""><i class="bx bxl-github social-icon"></i></a>
+      <a href=""><i class="bx bxl-linkedin social-icon"></i></a>
     </div>
   </div>
 
-  <div class="contact-form mt-10">
-    <form action="https://formspree.io/f/xjvndlza" method="POST">
-      <input type="text" placeholder="Enter Name" required />
-      <input type="email" placeholder="Enter Your Email" />
+  <div class="contact-form">
+    <form
+      [formGroup]="contactForm"
+      action="https://formspree.io/f/xjvndlza"
+      method="POST"
+    >
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Enter Name"
+        required
+      />
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched && contactForm.get('name')?.invalid
+        "
+      ></div>
 
-      <input type="" placeholder="Enter Your Subject" />
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Enter Your Email"
+        required
+      />
+      <div
+        *ngIf="
+          contactForm.get('email')?.touched && contactForm.get('email')?.invalid
+        "
+      ></div>
+
+      <input
+        type="text"
+        formControlName="subject"
+        placeholder="Enter Your Subject"
+        required
+      />
+      <div
+        *ngIf="
+          contactForm.get('subject')?.touched &&
+          contactForm.get('subject')?.invalid
+        "
+      ></div>
+
       <textarea
-        name=""
-        id=""
+        formControlName="message"
         cols="40"
         rows="10"
         placeholder="Enter Your Message"
+        required
       ></textarea>
-      <input type="submit" value="submit" class="send" />
+      <div
+        *ngIf="
+          contactForm.get('message')?.touched &&
+          contactForm.get('message')?.invalid
+        "
+      ></div>
+
+      <input
+        (click)="onSubmit()"
+        type="submit"
+        value="Submit"
+        class="send"
+        [disabled]="contactForm.invalid"
+      />
     </form>
   </div>
 </section>

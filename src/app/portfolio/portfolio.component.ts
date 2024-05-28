@@ -1,5 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,18 +10,40 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [],
+  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
 })
 export class PortfolioComponent {
-  constructor(private http: HttpClient) {}
-  // onSubmit() {
-  //   this.http
-  //     .post('https://formspree.io/f/mvoeyvvl', this.contactUs.value)
-  //     .subscribe((res) => {
-  //       console.log('res', res);
-  //       alert('Form submitted successfully!');
-  //       // Clear form fields
-  //       this.contactUs.reset();
-  //     });
+  contactForm: FormGroup;
+  // isExpanded = false;
+  isNavOpen = false;
+
+  constructor(private http: HttpClient, private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      subject: ['', Validators.required],
+      message: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    this.http
+      .post('https://formspree.io/f/xjvndlza', this.contactForm.value)
+      .subscribe((res) => {
+        alert('Form submitted successfully!');
+        this.contactForm.reset();
+      });
+  }
+
+  // toggleMenu() {
+  //   this.isExpanded = !this.isExpanded;
   // }
+
+  // closeMobileMenu() {
+  //   this.isMobileMenuOpen = false;
+  // }
+
+  toggleNav() {
+    this.isNavOpen = !this.isNavOpen;
+  }
 }

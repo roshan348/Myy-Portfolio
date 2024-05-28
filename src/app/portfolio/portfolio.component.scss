@@ -110,6 +110,12 @@
   animation-delay: 0.7s;
 }
 
+.home-content h2 {
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
 .home-icn h3:nth-of-type(2) {
   animation: slideTop 1s ease forwards;
   animation-delay: 0.2s;
@@ -417,6 +423,10 @@
   margin-bottom: 10px;
   display: block;
 }
+.contact-list a {
+  text-decoration: none;
+}
+
 .contact-list i {
   display: inline-block;
   color: #0ef;
@@ -510,3 +520,250 @@ form textarea {
   padding: 10px;
   border-radius: 0.5rem;
 }
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 2px solid red !important;
+}
+
+/* navbar.component.css */
+
+header {
+  z-index: 1000;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  transition: right 0.3s ease-in-out;
+  padding-top: 80px;
+  z-index: 999;
+  display: none;
+}
+
+.side-nav.open {
+  right: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  transition: backdrop-filter 0.3s;
+  visibility: hidden;
+  z-index: 998;
+}
+
+.overlay.blur {
+  visibility: visible;
+}
+
+.social-icon {
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+@media (max-width: 768px) and (min-width: 300px) {
+  .menu-button {
+    display: block;
+  }
+
+  .side-nav {
+    display: block;
+  }
+
+  // header {
+  //   width: 90%;
+  // }
+  header .navbar {
+    display: none;
+  }
+
+  .side-nav .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-content h3 {
+    margin-top: 50px;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .about-text {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .service-part {
+    padding: 10px;
+  }
+
+  .service-part .services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-part .services-list > div {
+    flex: 1 1 100%;
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-part .sub-title {
+    font-size: 2.5rem;
+  }
+
+  .service-part .services-list > div i {
+    font-size: 3rem;
+  }
+
+  .service-part .services-list > div h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-part .services-list > div p {
+    font-size: 1rem;
+  }
+
+  .sub-title {
+    font-size: 2.5rem;
+  }
+
+  .container1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .Technical-bars .bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Technical-bars .bar .info {
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+
+  .Technical-bars .bar .progress-line {
+    width: 100%;
+  }
+
+  .Technical-bars .bar .progress-line span {
+    background-color: #00eeff;
+  }
+
+  .main-text h2 {
+    font-size: 40px;
+  }
+
+  .project-card {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    // margin-left: 1rem;
+  }
+
+  .project-card img {
+    width: 90%;
+    // height: 100%;
+  }
+
+  .layer {
+    // padding: 1rem;
+    width: 93%;
+  }
+
+  .layer h5 {
+    font-size: 1.25rem;
+  }
+
+  .layer p {
+    font-size: 1rem;
+  }
+
+  .contact {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-text h2 {
+    font-size: 40px;
+  }
+  .contact-text p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .contact-list {
+    text-align: center;
+  }
+
+  .contact-icons {
+    justify-content: center;
+    // margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    padding: 1 1rem;
+    text-align: center;
+  }
+
+  .contact-form form {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .social-icon {
+    padding-left: 4px;
+    padding-top: 8px;
+  }
+
+  .send {
+    margin-top: 20px;
+  }
+}
+
+// @media (min-width: 769px) {
+//   .side-nav {
+//     display: none;
+//   }
+// }
