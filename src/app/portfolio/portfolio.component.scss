@@ -108,6 +108,7 @@
   opacity: 0;
   animation: slideBottom 1s ease forwards;
   animation-delay: 0.7s;
+  margin-top: 50px;
 }
 
 .home-content h2 {
@@ -155,7 +156,8 @@
 }
 
 // .slider-text-container {
-//   // display: flex;
+//   display: flex;
+//   align-items: center;
 // }
 
 // .dynamic-text {
@@ -186,14 +188,16 @@
 //   margin: 5px 0;
 //   line-height: 90px;
 // }
+
 // .dynamic-text li span::after {
 //   content: "";
 //   position: absolute;
 //   left: 0;
+//   // left: calc(100% + 10px);
 //   width: 100%;
 //   height: 100%;
-//   background-color: #081b29;
-//   border-left: 2px solid #fc6d6d;
+//   // background-color: black;
+//   border-left: 2px solid #0ef;
 //   animation: typing 3s steps(10) infinite;
 // }
 
@@ -206,6 +210,68 @@
 //     left: 0;
 //   }
 // }
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text span::before {
+  content: "Angular Developer";
+  color: #0ef;
+}
+.animated-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: black;
+  border-left: 2px solid #0ef;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Frontend Developer";
+  }
+  20.1%,
+  40% {
+    content: "Angular Developer";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
 .services {
   color: aliceblue;
   font-size: 20px;
@@ -760,6 +826,45 @@ header {
   .send {
     margin-top: 20px;
   }
+
+  // .home-content {
+  //   width: 100%;
+  //   padding: 2rem;
+  // }
+  // .animatedd-text {
+  //   font-size: 1.5rem;
+  //   text-align: center;
+  // }
+  // .text-name {
+  //   font-size: 1.875rem;
+  //   line-height: 3rem;
+  //   margin-left: 30px;
+  // }
+  // .animated-text {
+  //   font-size: 2rem;
+  //   margin-right: 50px;
+  //   // display: flex;
+  //   // text-align: center;
+  // }
+  // .animated-text span {
+  //   position: relative;
+  // }
+  // .mb-4 {
+  //   margin-bottom: 1rem;
+  // }
+  // .animated-text span::before {
+  //   font-size: 1.25rem;
+  // }
+  // .animated-text span::after {
+  //   width: calc(100% + 4px);
+  // }
+  // .home-icn a i {
+  //   // font-size: 1.5rem;
+  // }
+  // .btn-box {
+  //   // padding: 0.75rem 1.5rem;
+  //   // font-size: 1rem;
+  // }
 }
 
 // @media (min-width: 769px) {
