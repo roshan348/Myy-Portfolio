@@ -219,6 +219,7 @@
   content: "Angular Developer";
   color: #0ef;
 }
+
 .animated-text span::after {
   content: "";
   position: absolute;
@@ -355,16 +356,16 @@
   transform-origin: left;
 }
 .progress-line.html span {
-  width: 90%;
+  width: 100%;
 }
 .progress-line.css span {
-  width: 85%;
+  width: 95%;
 }
 .progress-line.Javascript span {
   width: 80%;
 }
 .progress-line.Angular span {
-  width: 70%;
+  width: 75%;
 }
 .progress-line.Typescript span {
   width: 50%;
