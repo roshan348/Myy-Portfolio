@@ -453,5 +453,7 @@
   class="last-text text-white bg-gradient-to-b from-black via-black bg-gray-500"
 >
   <p>Developed with love by Roshan Patil © 2024</p>
-  <a href="" class="top mt-4"><i class="bx bx-up-arrow-alt"></i></a>
+  <a *ngIf="showBackToTop" href="" class="top mt-4" (click)="scrollToTop()"
+    ><i class="bx bx-up-arrow-alt"></i
+  ></a>
 </div>

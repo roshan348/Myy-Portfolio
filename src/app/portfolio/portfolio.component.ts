@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -16,6 +16,7 @@ export class PortfolioComponent {
   contactForm: FormGroup;
   // isExpanded = false;
   isNavOpen = false;
+  showBackToTop = false;
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -45,5 +46,14 @@ export class PortfolioComponent {
 
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showBackToTop = window.pageYOffset > 100;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
