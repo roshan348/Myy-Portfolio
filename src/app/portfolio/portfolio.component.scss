@@ -155,62 +155,6 @@
   }
 }
 
-// .slider-text-container {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .dynamic-text {
-//   height: 90px;
-//   line-height: 90px;
-//   overflow: hidden;
-//   margin-inline-start: 15px;
-// }
-
-// .dynamic-text li {
-//   color: #fc6d6d;
-//   list-style: none;
-//   font-size: 20px;
-//   font-weight: 500;
-//   position: relative;
-//   top: 0;
-//   animation: animate 12s steps(4) infinite;
-// }
-
-// @keyframes animate {
-//   100% {
-//     top: -360px;
-//   }
-// }
-
-// .dynamic-text li span {
-//   position: relative;
-//   margin: 5px 0;
-//   line-height: 90px;
-// }
-
-// .dynamic-text li span::after {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   // left: calc(100% + 10px);
-//   width: 100%;
-//   height: 100%;
-//   // background-color: black;
-//   border-left: 2px solid #0ef;
-//   animation: typing 3s steps(10) infinite;
-// }
-
-// @keyframes typing {
-//   40%,
-//   60% {
-//     left: calc(100% + 30px);
-//   }
-//   100% {
-//     left: 0;
-//   }
-// }
-
 .animated-text span {
   position: relative;
 }
@@ -225,7 +169,7 @@
   position: absolute;
   width: calc(100% + 8px);
   height: 100%;
-  background-color: black;
+  background-color: gray;
   border-left: 2px solid #0ef;
   right: -8px;
   animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
@@ -262,6 +206,7 @@
     width: calc(100% + 8px);
   }
 }
+
 .services {
   color: aliceblue;
   font-size: 20px;
@@ -751,7 +696,7 @@ header {
   .project-card {
     max-width: 90%;
     margin-bottom: 2rem;
-    // margin-left: 1rem;
+    // margin-right: 1rem;
   }
 
   .project-card img {
@@ -815,6 +760,16 @@ header {
 
   .send {
     margin-top: 20px;
+  }
+
+  h2.animated-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2.animated-text span {
+    display: block;
+    margin-top: 5px;
   }
 
   .animated-text span {

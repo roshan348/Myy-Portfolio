@@ -1,4 +1,9 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -12,7 +17,7 @@ import { CommonModule } from '@angular/common';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   contactForm: FormGroup;
   // isExpanded = false;
   isNavOpen = false;
@@ -26,6 +31,8 @@ export class PortfolioComponent {
       message: ['', Validators.required],
     });
   }
+
+  ngOnInit(): void {}
 
   onSubmit() {
     this.http
