@@ -67,10 +67,15 @@
     0 0 50px cyan;
 }
 .logo {
-  cursor: default;
+  cursor: pointer;
   opacity: 0;
   animation: slideRight 1s ease forwards;
 }
+
+.logo:hover{
+   color: #00eeff;
+}
+
 
 @keyframes slideRight {
   0% {
