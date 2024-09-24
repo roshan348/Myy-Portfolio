@@ -72,10 +72,9 @@
   animation: slideRight 1s ease forwards;
 }
 
-.logo:hover{
-   color: #00eeff;
+.logo:hover {
+  color: #00eeff;
 }
-
 
 @keyframes slideRight {
   0% {
@@ -213,7 +212,7 @@
   }
 }
 
-.services {
+.experience {
   color: aliceblue;
   font-size: 20px;
   line-height: 1.4;
@@ -222,13 +221,13 @@
 .sub-title span {
   color: #0ef;
 }
-.services-list {
+.experience-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
   grid-gap: 80px;
   margin-top: 50px;
 }
-.services-list div {
+.experience-list div {
   background-color: transparent;
   padding: 40px;
   font-size: 13px;
@@ -237,7 +236,7 @@
   transition: background 0.5s, transform 0.5s;
   box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
 }
-// .services-list div:hover {
+// .experience-list div:hover {
 //   transform: translateY(-10px);
 // }
 .container1 {
@@ -636,35 +635,35 @@ header {
     padding: 0 20px;
   }
 
-  .service-part {
+  .experience-part {
     padding: 10px;
   }
 
-  .service-part .services-list {
+  .experience-part .experience-list {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .service-part .services-list > div {
+  .experience-part .experience-list > div {
     flex: 1 1 100%;
     max-width: 90%;
     margin-bottom: 1.5rem;
   }
 
-  .service-part .sub-title {
+  .experience-part .sub-title {
     font-size: 2.5rem;
   }
 
-  .service-part .services-list > div i {
+  .experience-part .experience-list > div i {
     font-size: 3rem;
   }
 
-  .service-part .services-list > div h2 {
+  .experience-part .experience-list > div h2 {
     font-size: 1.5rem;
   }
 
-  .service-part .services-list > div p {
+  .experience-part .experience-list > div p {
     font-size: 1rem;
   }
 
