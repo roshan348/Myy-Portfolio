@@ -19,7 +19,6 @@ import { CommonModule } from '@angular/common';
 })
 export class PortfolioComponent implements OnInit {
   contactForm: FormGroup;
-  // isExpanded = false;
   isNavOpen = false;
   showBackToTop = false;
 
@@ -42,14 +41,6 @@ export class PortfolioComponent implements OnInit {
         this.contactForm.reset();
       });
   }
-
-  // toggleMenu() {
-  //   this.isExpanded = !this.isExpanded;
-  // }
-
-  // closeMobileMenu() {
-  //   this.isMobileMenuOpen = false;
-  // }
 
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
