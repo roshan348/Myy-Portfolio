@@ -175,7 +175,6 @@
   height: 100%;
   background-color: black;
   border-left: 2px solid #0ef;
-  background-color: black;
   right: -8px;
   animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
 }
@@ -612,6 +611,11 @@ header {
   line-height: 1.6;
   letter-spacing: 0.5px;
   text-align: left;
+}
+
+.my-img{
+  width: 45vh;
+  height: 65vh;
 }
 
 // .about-img img {

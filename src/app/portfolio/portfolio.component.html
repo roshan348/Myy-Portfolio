@@ -41,7 +41,6 @@
         >Contact</a
       >
     </nav>
-
     <div class="menu-button md:hidden" (click)="toggleNav()">
       <i class="bx" [ngClass]="isNavOpen ? 'bx-x' : 'bx-menu'"></i>
     </div>
@@ -61,6 +60,19 @@
 
 <div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div>
 
+<!-- <div [class.open]="isNavOpen" class="side-nav">
+  <nav class="navbar">
+    <a href="#home" class="nav-link" (click)="toggleNav()">Home</a>
+    <a href="#about" class="nav-link" (click)="toggleNav()">About</a>
+    <a href="#services" class="nav-link" (click)="toggleNav()">Services</a>
+    <a href="#skills" class="nav-link" (click)="toggleNav()">Skills</a>
+    <a href="#projects" class="nav-link" (click)="toggleNav()">Projects</a>
+    <a href="#contact" class="nav-link" (click)="toggleNav()">Contact</a>
+  </nav>
+</div>
+
+<div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div> -->
+
 <section
   id="home"
   class="bg-gradient-to-t from-black via-black bg-gray-800 p-12 flex flex-col md:flex-row items-center"
@@ -69,7 +81,7 @@
     <h3 class="text-2xl font-bold text-white animated-text">Welcome,</h3>
     <h1 class="text-4xl font-bold text-white text-name">I Am Roshan Patil</h1>
     <h2 class="text-2xl font-bold mb-4 text-white animated-text">
-      <span class="typing-text"></span>
+       <span class="typing-text"></span>
     </h2>
 
     <p class="text-gray-300">
@@ -87,6 +99,15 @@
         style="--i: 8"
         ><i class="bx bxl-linkedin ml-1.5 mt-1.5"></i
       ></a>
+      <!-- <a
+        href="https://www.facebook.com/profile.php?id=100044167509299"
+        style="--i: 9"
+        target="_blank"
+        ><i class="bx bxl-facebook ml-1.5 mt-1.5"></i
+      ></a> -->
+      <!-- <a href="#" style="--i: 10"
+        ><i class="bx bxl-instagram ml-1.5 mt-1.5"></i
+      ></a> -->
     </div>
     <a href="../../assets/Patil Roshan CV.pdf" target="_blank" class="btn-box"
       >Download CV</a
@@ -121,20 +142,20 @@
 
     <h2 class="text-3xl font-bold mb-3 text-start">Namaste!</h2>
 
+
     <p class="text-lg mb-3">
-      I am <strong>Roshan Patil</strong>, A Passionate Frontend Developer
+      I am <strong>Roshan Patil</strong>, A Passionate Frontend Developer And I Am
       currently working at <strong>Angrio Technologies</strong>.
     </p>
     <p class="text-lg mb-4">
       My expertise shines in Angular, where I've translated my knowledge into
       impactful projects that seamlessly integrate front-end aesthetics with
       Backend as a Service (BaaS).
-    </p>
-    <p class="text-lg mb-4">
-      I thrive on creating intuitive user experiences and continuously explore
-      new technologies to elevate my craft. Let’s connect and create something
-      amazing together!
-    </p>
+      <p class="text-lg mb-4">
+        I thrive on creating intuitive user experiences and continuously explore
+        new technologies to elevate my craft. Let’s connect and create something
+        amazing together!
+      </p>
   </div>
 </section>
 
@@ -189,6 +210,7 @@
     Skills & <span>Abilities</span>
   </h1>
   <div class="container1 text-white ml-96" id="skills">
+    <!-- <h1 class="heading1">Technical Skills</h1> -->
     <div class="Technical-bars">
       <div class="bar text-xl">
         <i style="color: #c95d2e" class="bx bxl-html5"></i>
@@ -249,7 +271,7 @@
 >
   <div class="text-white">
     <div class="main-text" id="project">
-      <h2>Completed <span>Projects</span></h2>
+      <h2>Completed <span>Project</span></h2>
 
       <div class="px-5 project-content mt-14">
         <div class="row m-0 p-0 w-100 ml-10 project-card">
@@ -345,6 +367,12 @@
         target="_blank"
         ><i class="bx bxl-linkedin social-icon"></i
       ></a>
+      <!-- <a
+        href="https://www.facebook.com/profile.php?id=100044167509299"
+        target="_blank"
+        ><i class="bx bxl-facebook-circle social-icon"></i
+      ></a> -->
+      <!-- <a href=""><i class="bx bxl-instagram social-icon"></i></a> -->
     </div>
   </div>
 
