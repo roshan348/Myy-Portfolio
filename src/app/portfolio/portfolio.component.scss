@@ -371,7 +371,7 @@
 }
 
 .layer p {
-  color: white;
+  // color: black;
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -743,13 +743,14 @@ header {
   }
 
   .project-card {
-    max-width: 90%;
+    max-width: 100%;
+    height: 100%;
     margin-bottom: 2rem;
     // margin-right: 1rem;
   }
 
   .project-card img {
-    width: 90%;
+    width: 120%;
     // height: 100%;
   }
 
