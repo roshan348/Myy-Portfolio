@@ -773,9 +773,13 @@ header {
     padding-bottom: 3rem;
   }
 
+  .home-content h1{
+    font-size: 1.5rem;
+  }
+
   .typing-animation {
     margin-top: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #fff;
     opacity: 0;
     animation: slideRight 1s ease forwards;
