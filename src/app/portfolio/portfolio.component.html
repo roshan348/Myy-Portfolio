@@ -60,18 +60,6 @@
 
 <div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div>
 
-<!-- <div [class.open]="isNavOpen" class="side-nav">
-  <nav class="navbar">
-    <a href="#home" class="nav-link" (click)="toggleNav()">Home</a>
-    <a href="#about" class="nav-link" (click)="toggleNav()">About</a>
-    <a href="#services" class="nav-link" (click)="toggleNav()">Services</a>
-    <a href="#skills" class="nav-link" (click)="toggleNav()">Skills</a>
-    <a href="#projects" class="nav-link" (click)="toggleNav()">Projects</a>
-    <a href="#contact" class="nav-link" (click)="toggleNav()">Contact</a>
-  </nav>
-</div>
-
-<div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div> -->
 
 <section
   id="home"
@@ -80,41 +68,31 @@
   <div class="md:w-1/2 p-4 home-content">
     <h3 class="text-2xl font-bold text-white animated-text">Welcome,</h3>
     <h1 class="text-4xl font-bold text-white text-name">I Am Roshan Patil</h1>
-    <h2 class="text-2xl font-bold mb-4 text-white animated-text">
-       <span class="typing-text"></span>
-    </h2>
+    <div class="typing-animation font-bold">
+      <span class="typed-text">{{ typedText }}</span>
+    </div>
 
-    <p class="text-gray-300">
-      I specialize in creating beautiful and functional user interfaces using
-      modern web technologies. My passion is bringing designs to life with code
-      and creating seamless user experiences.
+    <p class="text-gray-300 mt-2">
+      Turning ideas into seamless, interactive experiences through code that
+      speaks. Let's create something extraordinary!
     </p>
     <div class="home-icn">
-      <a href="https://github.com/" style="--i: 7" target="_blank"
-        ><i class="bx bxl-github ml-1.5 mt-1.5"></i
+      <a href="https://github.com/roshan348" style="--i: 7" target="_blank"
+        ><i class="bx bxl-github d-flex justify-content-center mt-2"></i
       ></a>
       <a
         href="https://www.linkedin.com/in/roshan-patil-837871278?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bpu9EpdstTYqujyRTbzCHYA%3D%3D"
         target="_blank"
         style="--i: 8"
-        ><i class="bx bxl-linkedin ml-1.5 mt-1.5"></i
+        ><i class="bx bxl-linkedin d-flex justify-content-center mt-2"></i
       ></a>
-      <!-- <a
-        href="https://www.facebook.com/profile.php?id=100044167509299"
-        style="--i: 9"
-        target="_blank"
-        ><i class="bx bxl-facebook ml-1.5 mt-1.5"></i
-      ></a> -->
-      <!-- <a href="#" style="--i: 10"
-        ><i class="bx bxl-instagram ml-1.5 mt-1.5"></i
-      ></a> -->
     </div>
     <a href="../../assets/Patil Roshan CV.pdf" target="_blank" class="btn-box"
       >Download CV</a
     >
   </div>
 
-  <div class="md:w-1/2 p-4 flex justify-center md:justify-end mt-10">
+  <div class="profile-pic md:w-1/2 p-4 flex justify-center md:justify-end mt-10">
     <img
       src="../../assets/roshan-image.jpeg"
       alt="Profile Photo"
@@ -123,26 +101,24 @@
   </div>
 </section>
 
+<div class="text-3xl font-bold text-white text-center bg-black">
+  <i class="fas fa-user mx-2"></i> About <span class="text-3xl font-bold text-cyan-400">Me</span>
+</div>
+
 <section
   id="about"
   class="py-20 bg-gradient-to-b from-black via-black bg-gray-800 text-center flex flex-col md:flex-row justify-center items-center about"
 >
-  <div class="about-img mb-8 md:mb-0 md: mr-12">
+  <div class="about-img mb-8 md:mb-0 md: mr-12 flex flex-col items-center">
     <img
-      src="../../assets/roshan-image.jpeg"
+      src="../../assets/roshan-image-2.jfif"
       alt="Profile Photo"
       class="rounded-3xl w-80 h-full"
     />
   </div>
 
   <div class="about-text md:max-w-2xl text-white">
-    <h2 class="text-3xl font-bold mb-20">
-      About <span class="text-3xl font-bold text-cyan-400">Me</span>
-    </h2>
-
     <h2 class="text-3xl font-bold mb-3 text-start">Namaste!</h2>
-
-
     <p class="text-lg mb-3">
       I am <strong>Roshan Patil</strong>, A Passionate Frontend Developer And I Am
       currently working at <strong>Angrio Technologies</strong>.
@@ -166,7 +142,7 @@
   <div class="experience" id="experience">
     <div class="experience-part text-white p-20">
       <h1 class="sub-title text-center text-5xl pb-16">
-        My <span>Experience</span>
+        <i class="fas fa-briefcase"></i> My <span>Experience</span>
       </h1>
       <div class="experience-list">
         <div
@@ -188,12 +164,12 @@
         >
           <i class="bx bx-briefcase-alt text-6xl mb-4 text-[#00eeff]"></i>
           <h2 class="text-2xl font-medium mb-4">
-            Full-Time Job - June 2024 to Present
+            Full-Time Job - May 2024 to Present
           </h2>
           <p>
             Currently, I am working as a full-time developer at Angrio
             Technologies. I specialize in frontend development using Angular and
-            Supabase, and I am constantly learning and improving my skills in
+            Typescript, and I am constantly learning and improving my skills in
             web application development.
           </p>
         </div>
@@ -206,9 +182,10 @@
   id="skills"
   class="py-20 bg-gradient-to-b from-black via black bg-gray-800"
 >
-  <h1 class="sub-title text-white text-center text-5xl mb-10">
-    Skills & <span>Abilities</span>
-  </h1>
+<h1 class="sub-title text-white text-center text-5xl mb-10">
+  <i class="fas fa-lightbulb"></i> Skills & <span>Abilities</span>
+</h1>
+
   <div class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-white px-6">
     <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
       <i style="color: #DD0031" class="bx bxl-angular text-5xl"></i>
@@ -248,79 +225,17 @@
 </section>
 
 
-
-<!-- <section
-  id="projects"
-  class="bg-gradient-to-b from-black via-black bg-gray-800"
->
-  <div class="text-white">
-    <div class="main-text" id="project">
-      <h2>Completed <span>Project</span></h2>
-
-      <div class="px-5 project-content mt-14">
-        <div class="row m-0 p-0 w-100 ml-10 project-card">
-          <img
-            class="w-56 h-72"
-            src="../../assets/afforadable-project-jpg.jpg"
-            alt=""
-          />
-          <div class="layer">
-            <h5>Affordable Matrimony - Admin</h5>
-            <p class="text-black fw-bold">
-              Streamlining matchmaking management with a user-friendly interface and efficient admin tools for easy profile handling, user verification, and system oversight.
-            </p>
-            <a
-              href="https://affordable-matrimony-adm-8efb1.web.app/login"
-              target="_blank"
-              ><i class="bx bx-link-external" style="color: cyan"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="row m-0 p-0 project-card">
-          <img class="w-52 h-72" src="../../assets/Melodius-ss.JPG" alt="" />
-          <div class="layer">
-            <h5>Melodius-Tune</h5>
-            <p>
-              A dynamic music player with pre-added singer albums and tailored playlists for each album, offering a smooth and enjoyable listening experience.
-            </p>
-            <a href="https://melodiustune-627d5.web.app/" target="_blank"
-              ><i class="bx bx-link-external" style="color: cyan"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="row m-0 p-0 w-100 project-card">
-          <img
-            class="w-52 h-72"
-            src="../../assets/Crud-operation ss.JPG"
-            alt=""
-          />
-          <div class="layer">
-            <h5>CRUD-Operation</h5>
-            <p>
-              A robust system for managing student data with seamless create, read, update, and delete functionality, along with an organized student list view.
-            </p>
-            <a href="https://crud-operation-53f92.web.app/" target="_blank"
-              ><i class="bx bx-link-external" style="color: cyan"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <section
   id="projects"
   class="bg-gradient-to-b from-black via-black bg-gray-800 py-10"
 >
   <div class="text-white">
     <div class="main-text text-center" id="project">
-      <h2 class="text-3xl font-bold">Completed <span>Projects</span></h2>
+      <h2 class="text-3xl font-bold">
+        <i class="fas fa-check-circle"></i> Completed <span>Projects</span>
+      </h2>
 
       <div class="px-5 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Affordable Matrimony Project -->
         <div class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
@@ -335,13 +250,12 @@
             <a
               href="https://affordable-matrimony-adm-8efb1.web.app/login"
               target="_blank"
-              class="mt-4 text-cyan-500"
-              ><i class="bx bx-link-external"></i> Visit</a
+              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none text-xl"
+              ><i class="bx bx-link-external font-bold"></i> Visit</a
             >
           </div>
         </div>
 
-        <!-- Melodius Tune Project -->
         <div class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
@@ -356,13 +270,12 @@
             <a
               href="https://melodiustune-627d5.web.app/"
               target="_blank"
-              class="mt-4 text-cyan-500"
-              ><i class="bx bx-link-external"></i> Visit</a
+              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none text-xl"
+              ><i class="bx bx-link-external font-bold"></i> Visit</a
             >
           </div>
         </div>
 
-        <!-- CRUD Operation Project -->
         <div class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img
             class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
@@ -377,8 +290,8 @@
             <a
               href="https://crud-operation-53f92.web.app/"
               target="_blank"
-              class="mt-4 text-cyan-500"
-              ><i class="bx bx-link-external"></i> Visit</a
+              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none text-xl"
+              ><i class="bx bx-link-external font-bold"></i> Visit</a
             >
           </div>
         </div>
@@ -394,18 +307,20 @@
   id="contact"
 >
   <div class="contact-text text-white pt-10">
-    <h2>Contact <span>Me</span></h2>
-    <h4 class="mt-5">Let's Work Together</h4>
+    <h2>
+      <i class="fas fa-phone"></i> Contact <span>Me</span>
+    </h2>
+    <h4 class="mt-5">Let's Connect</h4>
     <p>
-      I am passionate about creating innovative and efficient solutions through
-      web development. With a keen eye for detail and a commitment to delivering
-      high-quality work, I am eager to collaborate on exciting projects. Whether
-      you have a new project in mind or need help with an existing one, feel
-      free to reach out. Let's make something great together!
+      I’m always open to discussing new projects, creative ideas, or
+      opportunities to be part of your vision. Feel free to reach out through
+      the form and I’ll get back to you as soon as possible. Whether you
+      need assistance with web development or have a project in mind, I look
+      forward to hearing from you!
     </p>
     <div class="contact-list">
       <li>
-        <i class="bx bxs-send mr-2"></i
+        <i class="fas fa-envelope mr-2"></i
         ><a href="mailto:roshan.angrio@gmail.com" target="_blank"
           >roshan.angrio&#64;gmail.com</a
         >
@@ -425,12 +340,6 @@
         target="_blank"
         ><i class="bx bxl-linkedin social-icon"></i
       ></a>
-      <!-- <a
-        href="https://www.facebook.com/profile.php?id=100044167509299"
-        target="_blank"
-        ><i class="bx bxl-facebook-circle social-icon"></i
-      ></a> -->
-      <!-- <a href=""><i class="bx bxl-instagram social-icon"></i></a> -->
     </div>
   </div>
 

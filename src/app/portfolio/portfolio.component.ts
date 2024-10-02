@@ -21,6 +21,12 @@ export class PortfolioComponent implements OnInit {
   contactForm: FormGroup;
   isNavOpen = false;
   showBackToTop = false;
+  texts: string[] = ['Angular Developer', 'Frontend Developer'];
+  typedText: string = '';
+  currentTextIndex: number = 0;
+  currentLetterIndex: number = 0;
+  typingSpeed: number = 90;
+  pauseDuration: number = 500;
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -31,7 +37,36 @@ export class PortfolioComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.startTypingAnimation();
+  }
+
+  startTypingAnimation() {
+    this.typeNextLetter();
+  }
+
+  typeNextLetter() {
+    if (this.currentLetterIndex < this.texts[this.currentTextIndex].length) {
+      this.typedText += this.texts[this.currentTextIndex].charAt(
+        this.currentLetterIndex
+      );
+      this.currentLetterIndex++;
+      setTimeout(() => this.typeNextLetter(), this.typingSpeed);
+    } else {
+      setTimeout(() => this.startDeletingAnimation(), this.pauseDuration);
+    }
+  }
+
+  startDeletingAnimation() {
+    if (this.typedText.length > 0) {
+      this.typedText = this.typedText.slice(0, -1);
+      setTimeout(() => this.startDeletingAnimation(), this.typingSpeed);
+    } else {
+      this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+      this.currentLetterIndex = 0;
+      setTimeout(() => this.typeNextLetter(), this.typingSpeed);
+    }
+  }
 
   onSubmit() {
     this.http

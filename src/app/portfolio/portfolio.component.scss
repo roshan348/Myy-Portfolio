@@ -159,58 +159,6 @@
   }
 }
 
-.animated-text span {
-  position: relative;
-}
-
-.animated-text span::before {
-  content: "Angular Developer";
-  color: #0ef;
-}
-
-.animated-text span::after {
-  content: "";
-  position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  background-color: black;
-  border-left: 2px solid #0ef;
-  right: -8px;
-  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-  to {
-    border-left: 2px solid #ff7f5000;
-  }
-}
-
-@keyframes typing {
-  10%,
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95% {
-    width: 0;
-  }
-  5%,
-  20%,
-  25%,
-  40%,
-  45%,
-  60%,
-  65%,
-  80%,
-  85% {
-    width: calc(100% + 8px);
-  }
-}
-
 .experience {
   color: aliceblue;
   font-size: 20px;
@@ -239,14 +187,10 @@
   transition: background 0.5s, transform 0.5s;
   box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
 }
-// .experience-list div:hover {
-//   transform: translateY(-10px);
-// }
+
 .container1 {
   width: 600px;
   height: 500px;
-  // padding: 75px 90px;
-  // margin-left: 350px;
 }
 .heading1 {
   text-align: center;
@@ -534,18 +478,9 @@ textarea.ng-invalid.ng-touched {
   border: 2px solid red !important;
 }
 
-/* navbar.component.css */
-
 header {
   z-index: 1000;
 }
-
-// .menu-button {
-//   background: none;
-//   border: none;
-//   cursor: pointer;
-//   display: none;
-// }
 
 .side-nav {
   position: fixed;
@@ -560,6 +495,7 @@ header {
   z-index: 999;
   display: none;
 }
+
 
 .side-nav.open {
   right: 0;
@@ -618,10 +554,31 @@ header {
   height: 65vh;
 }
 
-// .about-img img {
-//   border: 4px solid rgba(0, 255, 255, 0.7); /* Adds a border to the image */
-//   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
-// }
+.home-content{
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.typing-animation {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.typed-text {
+  border-right: 2px solid #fff;
+  padding-right: 5px;
+  animation: blink 0.7s step-end infinite;
+  color: #0ef;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
 
 @media (max-width: 768px) and (min-width: 300px) {
   .menu-button {
@@ -647,9 +604,6 @@ header {
     display: block;
   }
 
-  // header {
-  //   width: 90%;
-  // }
   header .navbar {
     display: none;
   }
@@ -665,6 +619,12 @@ header {
   }
 
   .about-img {
+    display: block;
+    width: 40vh;
+    margin-left: 4rem;
+  }
+
+  .profile-pic{
     display: none;
   }
 
@@ -674,9 +634,9 @@ header {
     padding: 0 20px;
   }
   .about-text p {
-    line-height: 1.6; /* Increases space between lines for readability */
-    letter-spacing: 0.5px; /* Slightly increases space between letters */
-    margin-bottom: 1rem; /* Ensures consistent spacing between paragraphs */
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
   }
 
   .experience-part {
@@ -696,7 +656,7 @@ header {
   }
 
   .experience-part .sub-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .experience-part .experience-list > div i {
@@ -712,7 +672,7 @@ header {
   }
 
   .sub-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .container1 {
@@ -739,23 +699,20 @@ header {
   }
 
   .main-text h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .project-card {
     max-width: 100%;
     height: 100%;
     margin-bottom: 2rem;
-    // margin-right: 1rem;
   }
 
   .project-card img {
     width: 120%;
-    // height: 100%;
   }
 
   .layer {
-    // padding: 1rem;
     width: 93%;
   }
 
@@ -791,7 +748,6 @@ header {
 
   .contact-icons {
     justify-content: center;
-    // margin-bottom: 2rem;
   }
 
   .contact-form {
@@ -812,71 +768,29 @@ header {
     margin-top: 20px;
   }
 
-  h2.animated-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h2.animated-text span {
-    display: block;
-    margin-top: 5px;
-  }
-
-  .animated-text span {
+  .home-content{
     position: relative;
+    padding-bottom: 3rem;
   }
 
-  .animated-text span::before {
-    content: "Angular Developer";
+  .typing-animation {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: #fff;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.7s;
+  }
+
+  .typed-text {
+    border-right: 2px solid #fff;
+    padding-right: 5px;
+    animation: blink 0.7s step-end infinite;
     color: #0ef;
   }
 
-  .animated-text span::after {
-    content: "";
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    background-color: black;
-    border-left: 2px solid #0ef;
-    right: -8px;
-    animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
-  }
-
-  @keyframes cursor {
-    to {
-      border-left: 2px solid #ff7f5000;
-    }
-  }
-
-  @keyframes typing {
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95% {
-      width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85% {
-      width: calc(100% + 8px);
-    }
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: white; }
   }
 }
-
-// @media (min-width: 769px) {
-//   .side-nav {
-//     display: none;
-//   }
-// }
