@@ -70,7 +70,7 @@ export class PortfolioComponent implements OnInit {
 
   onSubmit() {
     this.http
-      .post('https://formspree.io/f/xjvndlza', this.contactForm.value)
+      .post('https://formspree.io/f/mvgoppqn', this.contactForm.value)
       .subscribe((res) => {
         alert('Form submitted successfully!');
         this.contactForm.reset();
