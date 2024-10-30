@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -39,6 +40,12 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.startTypingAnimation();
+
+    AOS.init({
+      duration: 1200,
+      once: false,
+      offset: 50,
+    });
   }
 
   startTypingAnimation() {

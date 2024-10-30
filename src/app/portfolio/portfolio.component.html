@@ -60,7 +60,6 @@
 
 <div [class.blur]="isNavOpen" class="overlay" (click)="toggleNav()"></div>
 
-
 <section
   id="home"
   class="bg-gradient-to-t from-black via-black bg-gray-800 p-12 flex flex-col md:flex-row items-center"
@@ -87,12 +86,18 @@
         ><i class="bx bxl-linkedin d-flex justify-content-center mt-2"></i
       ></a>
     </div>
-    <a href="../../assets/Roshan Patil_Resume.pdf" target="_blank" class="btn-box"
+    <a
+      href="../../assets/Roshan Patil_Resume.pdf"
+      target="_blank"
+      class="btn-box"
       >Download CV</a
     >
   </div>
 
-  <div class="profile-pic md:w-1/2 p-4 flex justify-center md:justify-end mt-10">
+  <div
+    data-aos="fade-up"
+    class="profile-pic md:w-1/2 p-4 flex justify-center md:justify-end mt-10"
+  >
     <img
       src="../../assets/roshan-image.jpeg"
       alt="Profile Photo"
@@ -102,14 +107,18 @@
 </section>
 
 <div class="text-3xl font-bold text-white text-center bg-black">
-  <i class="fas fa-user mx-2"></i> About <span class="text-3xl font-bold text-cyan-400">Me</span>
+  <i class="fas fa-user mx-2"></i> About
+  <span class="text-3xl font-bold text-cyan-400">Me</span>
 </div>
 
 <section
   id="about"
   class="py-20 bg-gradient-to-b from-black via-black bg-gray-800 text-center flex flex-col md:flex-row justify-center items-center about"
 >
-  <div class="about-img mb-8 md:mb-0 md: mr-12 flex flex-col items-center">
+  <div
+    data-aos="fade-up"
+    class="about-img mb-8 md:mb-0 md: mr-12 flex flex-col items-center"
+  >
     <img
       src="../../assets/roshan-image-2.jfif"
       alt="Profile Photo"
@@ -120,18 +129,20 @@
   <div class="about-text md:max-w-2xl text-white">
     <h2 class="text-3xl font-bold mb-3 text-start">Namaste!</h2>
     <p class="text-lg mb-3">
-      I am <strong>Roshan Patil</strong>, A Passionate Frontend Developer And I Am
-      currently working at <strong>Angrio Technologies</strong>.
+      I am <strong>Roshan Patil</strong>, A Passionate Frontend Developer And I
+      Am currently working at <strong>Angrio Technologies</strong>.
     </p>
     <p class="text-lg mb-4">
       My expertise shines in Angular, where I've translated my knowledge into
       impactful projects that seamlessly integrate front-end aesthetics with
       Backend as a Service (BaaS).
-      <p class="text-lg mb-4">
-        I thrive on creating intuitive user experiences and continuously explore
-        new technologies to elevate my craft. Let’s connect and create something
-        amazing together!
-      </p>
+    </p>
+
+    <p class="text-lg mb-4">
+      I thrive on creating intuitive user experiences and continuously explore
+      new technologies to elevate my craft. Let’s connect and create something
+      amazing together!
+    </p>
   </div>
 </section>
 
@@ -146,6 +157,8 @@
       </h1>
       <div class="experience-list">
         <div
+          data-aos="fade-up"
+          data-aos-offset="50"
           class="transition-transform transform hover:-translate-y-2 rounded-xl"
         >
           <i class="bx bx-briefcase text-6xl mb-4 text-[#00eeff]"></i>
@@ -160,6 +173,8 @@
         </div>
 
         <div
+          data-aos="fade-up"
+          data-aos-offset="50"
           class="transition-transform transform hover:-translate-y-2 rounded-xl"
         >
           <i class="bx bx-briefcase-alt text-6xl mb-4 text-[#00eeff]"></i>
@@ -182,54 +197,82 @@
   id="skills"
   class="py-10 bg-gradient-to-b from-black via black bg-gray-800"
 >
-<h1 class="sub-title text-white text-center text-5xl mb-10">
-  <i class="fas fa-lightbulb"></i> Skills & <span>Abilities</span>
-</h1>
+  <h1 class="sub-title text-white text-center text-5xl mb-10">
+    <i class="fas fa-lightbulb"></i> Skills & <span>Abilities</span>
+  </h1>
 
-  <div class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-white px-6">
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <i style="color: #DD0031" class="bx bxl-angular text-5xl"></i>
+  <div
+    class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-white px-6"
+  >
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <i style="color: #dd0031" class="bx bxl-angular text-5xl"></i>
       <span class="text-lg mt-2">Angular</span>
     </div>
 
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <i style="color: #F7DF1E" class="bx bxl-javascript text-5xl"></i>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <i style="color: #f7df1e" class="bx bxl-javascript text-5xl"></i>
       <span class="text-lg mt-2">JavaScript</span>
     </div>
 
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <i style="color: #3178C6" class="bx bxl-typescript text-5xl"></i>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <i style="color: #3178c6" class="bx bxl-typescript text-5xl"></i>
       <span class="text-lg mt-2">TypeScript</span>
     </div>
 
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" alt="Ionic" class="w-12 h-12"/>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg"
+        alt="Ionic"
+        class="w-12 h-12"
+      />
       <span class="text-lg mt-2">Ionic</span>
     </div>
 
-
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <i style="color: #E34F26" class="bx bxl-html5 text-5xl"></i>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <i style="color: #e34f26" class="bx bxl-html5 text-5xl"></i>
       <span class="text-lg mt-2">HTML</span>
     </div>
 
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <i style="color: #1572B6" class="bx bxl-css3 text-5xl"></i>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <i style="color: #1572b6" class="bx bxl-css3 text-5xl"></i>
       <span class="text-lg mt-2">CSS</span>
     </div>
 
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <img src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="Supabase" class="w-12 h-12"/>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <img
+        src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png"
+        alt="Supabase"
+        class="w-12 h-12"
+      />
       <span class="text-lg mt-2">Supabase</span>
     </div>
 
-    <div class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300">
-      <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" alt="Firebase" class="w-12 h-12"/>
+    <div
+      class="skill-box p-4 bg-gray-900 rounded-lg flex flex-col items-center justify-center hover:bg-[#0ef] transition-all duration-300"
+    >
+      <img
+        src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg"
+        alt="Firebase"
+        class="w-12 h-12"
+      />
       <span class="text-lg mt-2">Firebase</span>
     </div>
   </div>
 </section>
-
 
 <section
   id="projects"
@@ -241,17 +284,27 @@
         <i class="fas fa-check-circle"></i> Completed <span>Projects</span>
       </h2>
 
-      <div class="px-5 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+      <div
+        class="px-5 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+      >
+        <div
+          class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
+        >
           <img
             class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/afforadable-project-jpg.jpg"
             alt="Affordable Matrimony"
           />
-          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
-            <h5 class="text-lg font-bold text-white">Affordable Matrimony - Admin</h5>
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4"
+          >
+            <h5 class="text-lg font-bold text-white">
+              Affordable Matrimony - Admin
+            </h5>
             <p class="text-sm text-gray-300 mt-2 text-center">
-              Streamlining matchmaking management with a user-friendly interface and efficient admin tools for easy profile handling, user verification, and system oversight.
+              Streamlining matchmaking management with a user-friendly interface
+              and efficient admin tools for easy profile handling, user
+              verification, and system oversight.
             </p>
             <a
               href="https://affordable-matrimony-adm-8efb1.web.app/login"
@@ -262,16 +315,22 @@
           </div>
         </div>
 
-        <div class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <div
+          class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
+        >
           <img
             class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/Melodius-ss.JPG"
             alt="Melodius Tune"
           />
-          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4"
+          >
             <h5 class="text-lg font-bold text-white">Melodius-Tune</h5>
             <p class="text-sm text-gray-300 mt-2 text-center">
-              A dynamic music player with pre-added singer albums and tailored playlists for each album, offering a smooth and enjoyable listening experience.
+              A dynamic music player with pre-added singer albums and tailored
+              playlists for each album, offering a smooth and enjoyable
+              listening experience.
             </p>
             <a
               href="https://melodiustune-627d5.web.app/"
@@ -282,16 +341,22 @@
           </div>
         </div>
 
-        <div class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <div
+          class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
+        >
           <img
             class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/Crud-operation ss.JPG"
             alt="CRUD Operation"
           />
-          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4"
+          >
             <h5 class="text-lg font-bold text-white">CRUD-Operation</h5>
             <p class="text-sm text-gray-300 mt-2 text-center">
-              A robust system for managing student data with seamless create, read, update, and delete functionality, along with an organized student list view.
+              A robust system for managing student data with seamless create,
+              read, update, and delete functionality, along with an organized
+              student list view.
             </p>
             <a
               href="https://crud-operation-53f92.web.app/"
@@ -306,23 +371,19 @@
   </div>
 </section>
 
-
-
 <section
   class="contact bg-gradient-to-t from-black via-black bg-gray-800 py-16"
   id="contact"
 >
   <div class="contact-text text-white pt-10">
-    <h2>
-      <i class="fas fa-phone"></i> Contact <span>Me</span>
-    </h2>
+    <h2><i class="fas fa-phone"></i> Contact <span>Me</span></h2>
     <h4 class="mt-5">Let's Connect</h4>
     <p>
       I’m always open to discussing new projects, creative ideas, or
       opportunities to be part of your vision. Feel free to reach out through
-      the form and I’ll get back to you as soon as possible. Whether you
-      need assistance with web development or have a project in mind, I look
-      forward to hearing from you!
+      the form and I’ll get back to you as soon as possible. Whether you need
+      assistance with web development or have a project in mind, I look forward
+      to hearing from you!
     </p>
     <div class="contact-list">
       <li>
