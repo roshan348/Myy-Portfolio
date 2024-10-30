@@ -9,6 +9,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
@@ -16,7 +20,14 @@ import * as AOS from 'aos';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [ReactiveFormsModule, CommonModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    // BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastModule,
+  ],
+  providers: [MessageService],
 })
 export class PortfolioComponent implements OnInit {
   contactForm: FormGroup;
@@ -29,7 +40,11 @@ export class PortfolioComponent implements OnInit {
   typingSpeed: number = 90;
   pauseDuration: number = 500;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) {
+  constructor(
+    private http: HttpClient,
+    private fb: FormBuilder,
+    private messageService: MessageService
+  ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -78,10 +93,23 @@ export class PortfolioComponent implements OnInit {
   onSubmit() {
     this.http
       .post('https://formspree.io/f/mvgoppqn', this.contactForm.value)
-      .subscribe((res) => {
-        alert('Form submitted successfully!');
-        this.contactForm.reset();
-      });
+      .subscribe(
+        (res) => {
+          console.log('Called');
+          this.messageService.add({
+            severity: 'success',
+            detail: 'Form submitted successfully',
+          });
+          this.contactForm.reset();
+        },
+        (error) => {
+          this.messageService.add({
+            severity: 'error',
+            detail: 'Failed to send message',
+          });
+          console.error(error);
+        }
+      );
   }
 
   toggleNav() {

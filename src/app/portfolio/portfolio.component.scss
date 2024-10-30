@@ -447,11 +447,19 @@ form textarea {
   opacity: 0;
   animation: slideTop 1s ease forwards;
   animation-delay: 0.1s;
+  width: 90%;
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
 }
 .contact-form form .send:hover {
   box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 10px cyan, 0 0 10px cyan,
     0 0 10px cyan;
+}
+.contact-form form .send.disabled {
+  background: #0ef;
+  color: #9e9e9e;
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 .last-text p {
   width: 100%;
@@ -495,7 +503,6 @@ header {
   z-index: 999;
   display: none;
 }
-
 
 .side-nav.open {
   right: 0;
@@ -549,12 +556,12 @@ header {
   text-align: left;
 }
 
-.my-img{
+.my-img {
   width: 45vh;
   height: 65vh;
 }
 
-.home-content{
+.home-content {
   position: relative;
   padding-bottom: 3rem;
 }
@@ -576,8 +583,13 @@ header {
 }
 
 @keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: white; }
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 300px) {
@@ -624,7 +636,7 @@ header {
     margin-left: 2.8rem;
   }
 
-  .profile-pic{
+  .profile-pic {
     display: none;
   }
 
@@ -768,12 +780,12 @@ header {
     margin-top: 20px;
   }
 
-  .home-content{
+  .home-content {
     position: relative;
     padding-bottom: 3rem;
   }
 
-  .home-content h1{
+  .home-content h1 {
     font-size: 1.5rem;
   }
 
@@ -794,7 +806,66 @@ header {
   }
 
   @keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: white; }
+    0%,
+    100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
   }
+
+  ::ng-deep .p-toast-message-detail {
+    // gap: 5px !important;
+  }
+
+  ::ng-deep .p-toast {
+    display: flex;
+    justify-content: center;
+  }
+
+  ::ng-deep .p-toast-icon-close {
+    margin-top: 3px !important;
+  }
+
+  ::ng-deep .p-toast-message-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  ::ng-deep .p-toast-detail {
+    font-size: 14px !important;
+  }
+
+  ::ng-deep .p-toast-icon {
+    margin-left: 5px !important;
+  }
+}
+
+::ng-deep .p-toast-message-content {
+  gap: 10px !important;
+}
+
+::ng-deep .p-toast-message-success {
+  background: #4caf50 !important;
+  color: #fff !important;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+::ng-deep .p-toast-message-error {
+  background: #f44336 !important;
+  color: #fff !important;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+::ng-deep .p-toast-icon {
+  margin-left: 10px !important;
+}
+
+::ng-deep .p-toast-summary {
+  padding-right: 30px !important;
 }

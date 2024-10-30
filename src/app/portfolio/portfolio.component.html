@@ -291,7 +291,7 @@
           class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
         >
           <img
-            class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
+            class="w-full h-72 object-contain transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/afforadable-project-jpg.jpg"
             alt="Affordable Matrimony"
           />
@@ -319,7 +319,7 @@
           class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
         >
           <img
-            class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
+            class="w-full h-72 object-contain transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/Melodius-ss.JPG"
             alt="Melodius Tune"
           />
@@ -345,7 +345,7 @@
           class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
         >
           <img
-            class="w-full h-72 object-cover transition-transform duration-300 transform group-hover:scale-110"
+            class="w-full h-72 object-contain transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/Crud-operation ss.JPG"
             alt="CRUD Operation"
           />
@@ -411,6 +411,8 @@
   </div>
 
   <div class="contact-form">
+    <p-toast />
+
     <form
       [formGroup]="contactForm"
       action="https://formspree.io/f/mvgoppqn"
@@ -471,13 +473,15 @@
         "
       ></div>
 
-      <input
+      <button
         (click)="onSubmit()"
         type="submit"
-        value="Send Message"
         class="send cursor-pointer"
-        [disabled]="contactForm.invalid"
-      />
+        [ngClass]="{ disabled: !contactForm.valid }"
+        [disabled]="!contactForm.valid"
+      >
+        Send Message
+      </button>
     </form>
   </div>
 </section>
