@@ -118,7 +118,11 @@ export class PortfolioComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.showBackToTop = window.pageYOffset > 100;
+    if (window.pageYOffset > 0) {
+      this.showBackToTop = true;
+    } else {
+      this.showBackToTop = false;
+    }
   }
 
   scrollToTop() {

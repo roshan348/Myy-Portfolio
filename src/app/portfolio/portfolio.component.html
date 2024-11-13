@@ -287,21 +287,17 @@
       <div
         class="px-5 mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
       >
-        <div
-          class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
-        >
+        <div class="relative group project-card shadow-lg">
           <img
-            class="w-full h-72 object-contain transition-transform duration-300 transform group-hover:scale-110"
+            class="transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/afforadable-project-jpg.jpg"
             alt="Affordable Matrimony"
           />
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4"
           >
-            <h5 class="text-lg font-bold text-white">
-              Affordable Matrimony - Admin
-            </h5>
-            <p class="text-sm text-gray-300 mt-2 text-center">
+            <h5 class="font-bold text-white">Affordable Matrimony - Admin</h5>
+            <p class="text-gray-300 mt-2 text-center">
               Streamlining matchmaking management with a user-friendly interface
               and efficient admin tools for easy profile handling, user
               verification, and system oversight.
@@ -309,25 +305,23 @@
             <a
               href="https://affordable-matrimony-adm-8efb1.web.app/login"
               target="_blank"
-              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none text-xl"
+              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none"
               ><i class="bx bx-link-external font-bold"></i> Visit</a
             >
           </div>
         </div>
 
-        <div
-          class="relative group project-card bg-gray-900 rounded-lg overflow-hidden shadow-lg"
-        >
+        <div class="relative group project-card shadow-lg">
           <img
-            class="w-full h-72 object-contain transition-transform duration-300 transform group-hover:scale-110"
+            class="transition-transform duration-300 transform group-hover:scale-110"
             src="../../assets/Melodius-ss.JPG"
             alt="Melodius Tune"
           />
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4"
           >
-            <h5 class="text-lg font-bold text-white">Melodius-Tune</h5>
-            <p class="text-sm text-gray-300 mt-2 text-center">
+            <h5 class="font-bold text-white">Melodius-Tune</h5>
+            <p class="text-gray-300 mt-2 text-center">
               A dynamic music player with pre-added singer albums and tailored
               playlists for each album, offering a smooth and enjoyable
               listening experience.
@@ -335,7 +329,7 @@
             <a
               href="https://melodiustune-627d5.web.app/"
               target="_blank"
-              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none text-xl"
+              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none"
               ><i class="bx bx-link-external font-bold"></i> Visit</a
             >
           </div>
@@ -352,8 +346,8 @@
           <div
             class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4"
           >
-            <h5 class="text-lg font-bold text-white">CRUD-Operation</h5>
-            <p class="text-sm text-gray-300 mt-2 text-center">
+            <h5 class="font-bold text-white">CRUD-Operation</h5>
+            <p class="text-gray-300 mt-2 text-center">
               A robust system for managing student data with seamless create,
               read, update, and delete functionality, along with an organized
               student list view.
@@ -361,7 +355,7 @@
             <a
               href="https://crud-operation-53f92.web.app/"
               target="_blank"
-              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none text-xl"
+              class="mt-4 text-cyan-500 hover:text-cyan-300 text-decoration-none"
               ><i class="bx bx-link-external font-bold"></i> Visit</a
             >
           </div>
@@ -493,7 +487,14 @@
     All Rights Reserved ©
     <span class="animate-pulse text-red-500">❤️</span> Roshan Patil
   </p>
-  <a *ngIf="showBackToTop" href="" class="top mt-4" (click)="scrollToTop()"
-    ><i class="bx bx-up-arrow-alt"></i
-  ></a>
+
+  <button
+    mat-fab
+    matTooltip="showBackToTop"
+    *ngIf="showBackToTop"
+    class="top mt-4"
+    (click)="scrollToTop()"
+  >
+    <i class="bx bx-up-arrow-alt"></i>
+  </button>
 </div>

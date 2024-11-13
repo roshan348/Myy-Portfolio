@@ -582,6 +582,25 @@ header {
   color: #0ef;
 }
 
+.project-card {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: #1a202c;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
 @keyframes blink {
   0%,
   100% {
@@ -715,13 +734,30 @@ header {
   }
 
   .project-card {
-    max-width: 100%;
-    height: 100%;
-    margin-bottom: 2rem;
+    margin: 0 auto;
   }
 
   .project-card img {
-    width: 120%;
+    height: 135px;
+    object-fit: cover;
+  }
+
+  .project-card div {
+    padding: 0.5rem;
+  }
+
+  .project-card h5 {
+    font-size: 10px;
+    margin-top: 50px;
+  }
+
+  .project-card p {
+    font-size: 10px;
+  }
+
+  .project-card a {
+    font-size: 10px;
+    margin-bottom: 50px;
   }
 
   .layer {
